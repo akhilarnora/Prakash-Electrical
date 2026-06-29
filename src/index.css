@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #1F1F23;
+  --color-primary-orange: #E58A35;
+  --color-primary-white: #FFFFFF;
+  --color-accent-light: #F5F5F5;
+  --color-accent-dark: #2F2F35;
+  --color-accent-gold: #FFB45A;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: #1F1F23;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1F1F23;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E58A35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFB45A;
+}
+
+/* Circuit lines and special glowing effects */
+.glow-shadow-orange {
+  box-shadow: 0 0 15px rgba(229, 138, 53, 0.3);
+}
+
+.glow-shadow-orange-strong {
+  box-shadow: 0 0 25px rgba(229, 138, 53, 0.6);
+}
+
+/* Custom pulse animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #E58A35, transparent);
+  height: 2px;
+  filter: blur(1px);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Wave lines for background decoration */
+.bg-circuit-pattern {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(229, 138, 53, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(229, 138, 53, 0.05) 0%, transparent 40%);
+}
