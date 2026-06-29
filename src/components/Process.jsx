@@ -56,12 +56,12 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-24 bg-primary-dark relative">
+    <section id="process" className="py-24 bg-primary-dark relative overflow-hidden">
       {/* Decorative Light Glows */}
       <div className="absolute top-0 right-10 w-96 h-96 bg-primary-orange/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-primary-orange/5 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10">
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -79,7 +79,7 @@ export default function Process() {
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical central timeline line */}
           <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-0.5 bg-accent-dark/80 -translate-x-1/2 hidden md:block" />
-          <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-accent-dark/80 -translate-x-1/2 md:hidden" />
+          <div className="absolute left-5 xxs:left-6 top-4 bottom-4 w-0.5 bg-accent-dark/80 -translate-x-1/2 md:hidden" />
 
           {/* Timeline Steps */}
           <div className="space-y-12 md:space-y-16">
@@ -99,7 +99,7 @@ export default function Process() {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ type: 'spring', damping: 15, delay: 0.1 }}
-                    className="absolute left-6 md:left-1/2 w-12 h-12 rounded-full bg-accent-dark border-2 border-primary-orange flex items-center justify-center -translate-x-1/2 z-20 shadow-md glow-shadow-orange"
+                    className="absolute left-5 xxs:left-6 md:left-1/2 w-10 h-10 xxs:w-12 xxs:h-12 rounded-full bg-accent-dark border-2 border-primary-orange flex items-center justify-center -translate-x-1/2 z-20 shadow-md glow-shadow-orange"
                   >
                     <span className="text-xs text-primary-orange font-heading font-bold">{stepData.step}</span>
                   </motion.div>
@@ -116,7 +116,7 @@ export default function Process() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-                    className={`w-full md:w-1/2 pl-12 md:pl-0 ${
+                    className={`w-full md:w-1/2 pl-10 xxs:pl-12 md:pl-0 ${
                       isEven ? 'md:pl-16 text-left' : 'md:pr-16 text-left md:text-right'
                     }`}
                   >

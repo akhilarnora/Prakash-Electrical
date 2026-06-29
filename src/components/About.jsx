@@ -46,7 +46,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 bg-primary-dark/45 bg-circuit-pattern relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10">
         
         {/* Title and Description block */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
@@ -89,7 +89,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {cards.map((card, index) => (
             <motion.div
@@ -100,15 +100,15 @@ export default function About() {
                 borderColor: 'rgba(229, 138, 53, 0.4)',
                 boxShadow: '0 10px 25px rgba(229, 138, 53, 0.1)'
               }}
-              className="bg-accent-dark/40 backdrop-blur-sm p-8 rounded-2xl border border-accent-dark/80 flex flex-col items-start text-left transition-all duration-300 group"
+              className="bg-accent-dark/40 backdrop-blur-sm p-5 sm:p-8 rounded-2xl border border-accent-dark/80 flex flex-col items-start text-left transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-primary-dark/80 rounded-xl flex items-center justify-center border border-accent-dark group-hover:border-primary-orange/30 group-hover:bg-primary-orange/5 transition-colors mb-6 shadow-inner">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-dark/80 rounded-xl flex items-center justify-center border border-accent-dark group-hover:border-primary-orange/30 group-hover:bg-primary-orange/5 transition-colors mb-4 sm:mb-6 shadow-inner">
                 {card.icon}
               </div>
-              <h3 className="font-heading font-bold text-lg text-white group-hover:text-primary-orange transition-colors mb-3">
+              <h3 className="font-heading font-bold text-base sm:text-lg text-white group-hover:text-primary-orange transition-colors mb-2 sm:mb-3">
                 {card.title}
               </h3>
-              <p className="font-sans text-sm text-accent-light/75 leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-accent-light/75 leading-relaxed">
                 {card.description}
               </p>
             </motion.div>

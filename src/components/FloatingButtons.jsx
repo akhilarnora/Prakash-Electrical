@@ -28,15 +28,15 @@ export default function FloatingButtons() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative group flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#20ba5a] transition-all duration-300 transform hover:scale-110 active:scale-95"
+        className="relative group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#20ba5a] transition-all duration-300 transform hover:scale-110 active:scale-95"
         aria-label="Chat on WhatsApp"
       >
         {/* Animated pulse rings */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping duration-1000 delay-300"></span>
-        <FaWhatsapp className="text-2xl z-10" />
+        <FaWhatsapp className="text-xl sm:text-2xl z-10" />
 
         {/* Tooltip */}
-        <span className="absolute right-16 bg-accent-dark text-white text-xs font-semibold py-1.5 px-3 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap border border-[#25D366]/20">
+        <span className="absolute right-14 sm:right-16 bg-accent-dark text-white text-xs font-semibold py-1.5 px-3 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap border border-[#25D366]/20">
           WhatsApp Us
         </span>
       </a>

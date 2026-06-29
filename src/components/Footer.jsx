@@ -19,8 +19,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#151518] text-white border-t border-accent-dark/40 pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-accent-dark/20">
-        
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-accent-dark/20">
+
         {/* Brand Side Column */}
         <div className="lg:col-span-5 flex flex-col justify-start items-start text-left">
           <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-3 mb-6 group">
@@ -41,14 +41,14 @@ export default function Footer() {
           </p>
           {/* Social CTA Links */}
           <div className="flex gap-4">
-            <a 
+            <a
               href={`tel:+91${phone}`}
               className="w-10 h-10 rounded-full bg-accent-dark/80 flex items-center justify-center text-accent-light hover:text-primary-orange hover:bg-accent-dark transition-all border border-accent-light/5"
               aria-label="Call Direct Line"
             >
               <FaPhone className="text-sm" />
             </a>
-            <a 
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export default function Footer() {
           <ul className="space-y-3 font-sans text-sm text-accent-light/70">
             {['Home', 'About', 'Services', 'Process', 'Contact'].map((link) => (
               <li key={link}>
-                <a 
+                <a
                   href={`#${link.toLowerCase()}`}
                   onClick={(e) => handleLinkClick(e, `#${link.toLowerCase()}`)}
                   className="hover:text-primary-orange transition-colors duration-200"
@@ -88,7 +88,7 @@ export default function Footer() {
           <ul className="space-y-3 font-sans text-sm text-accent-light/70">
             {['House Wiring', 'Commercial Wiring', 'LED Fittings', 'Inverter Setup', 'Phase Selector', 'AC Wiring'].map((service) => (
               <li key={service}>
-                <a 
+                <a
                   href="#services"
                   onClick={(e) => handleLinkClick(e, '#services')}
                   className="hover:text-primary-orange transition-colors duration-200"
@@ -126,12 +126,12 @@ export default function Footer() {
       </div>
 
       {/* Copyright Sub-footer */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
         <p className="font-sans text-xs text-accent-light/45">
           &copy; {new Date().getFullYear()} Prakash Electrical. All Rights Reserved.
         </p>
         <p className="font-sans text-[10px] text-accent-light/30">
-          Designed with ❤️ in Kerala for Prakash Electrical. Licensed Contractor.
+          Designed with ❤️ in <a href="https://arnora.in">arnora.in</a>.
         </p>
       </div>
     </footer>

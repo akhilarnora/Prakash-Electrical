@@ -6,7 +6,7 @@ export default function Contact() {
   const phone = '9847472927';
   const whatsappUrl = `https://wa.me/91${phone}?text=Hi%20Prakash%20Electrical,%20I%20want%20to%20inquire%20about%20a%20service.`;
   const mapsUrl = `https://maps.google.com/?q=Nedumangad,+Thiruvananthapuram,+Kerala`;
-  
+
   // Google Maps embed URL centered around Nedumangad area
   const mapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.868779913076!2d76.99371727581177!3d8.608034094254093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b822d64a02c9%3A0xe54e605d398dc37d!2sNedumangad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1719642598000!5m2!1sen!2sin`;
 
@@ -38,11 +38,11 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-primary-dark relative">
+    <section id="contact" className="py-24 bg-primary-dark relative overflow-hidden">
       <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-primary-orange/5 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10">
+
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs text-primary-orange font-bold uppercase tracking-widest block mb-3">GET IN TOUCH</span>
@@ -57,12 +57,12 @@ export default function Contact() {
 
         {/* Contact Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          
+
           {/* Left Details Side */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
-            
+
             {/* Contact cards info grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {contactDetails.map((detail, index) => (
                 <motion.div
                   key={index}
@@ -70,18 +70,18 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-accent-dark/30 p-6 rounded-2xl border border-accent-dark/80 flex flex-col justify-start text-left hover:border-primary-orange/30 transition-all duration-300"
+                  className="bg-accent-dark/30 p-5 sm:p-6 rounded-2xl border border-accent-dark/80 flex flex-col justify-start text-left hover:border-primary-orange/30 transition-all duration-300"
                 >
                   <div className="w-10 h-10 bg-primary-dark/80 rounded-lg flex items-center justify-center border border-accent-dark mb-4">
                     {detail.icon}
                   </div>
-                  <h4 className="font-heading font-bold text-sm text-accent-light/50 tracking-wide uppercase">
+                  <h4 className="font-heading font-bold text-[10px] sm:text-xs text-accent-light/50 tracking-wide uppercase">
                     {detail.title}
                   </h4>
                   <p className="font-sans font-bold text-sm sm:text-base text-white mt-2 leading-relaxed">
                     {detail.value}
                   </p>
-                  <p className="font-sans text-xs text-accent-light/60 mt-1 font-medium">
+                  <p className="font-sans text-[11px] sm:text-xs text-accent-light/60 mt-1 font-medium">
                     {detail.subText}
                   </p>
                 </motion.div>
@@ -89,14 +89,8 @@ export default function Contact() {
             </div>
 
             {/* Live Interactive Action Buttons */}
-            <div className="bg-accent-dark/20 p-6 rounded-2xl border border-accent-dark/40 flex flex-col sm:flex-row gap-4 w-full">
-              <a
-                href={`tel:+91${phone}`}
-                className="flex-1 flex items-center justify-center gap-2 bg-primary-orange hover:bg-accent-gold text-primary-dark font-heading font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md text-sm"
-              >
-                <FaPhone className="text-xs" />
-                Call Binu Prakash
-              </a>
+            <div className="bg-accent-dark/20 p-4 xxs:p-6 rounded-2xl border border-accent-dark/40 flex flex-col sm:flex-row gap-4 w-full">
+
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -121,9 +115,9 @@ export default function Contact() {
 
           {/* Right Map Side with Service Area info */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
-            
+
             {/* Map Frame Container */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -150,8 +144,8 @@ export default function Contact() {
               </h4>
               <div className="flex flex-wrap gap-2">
                 {['Nedumangad', 'Thiruvananthapuram', 'Velloorkonam', 'Mancha', 'Karakulam', 'Vattiyoorkavu', 'Peroorkada', 'Kowdiar', 'Pattom', 'Mannanthala'].map((area, i) => (
-                  <span 
-                    key={i} 
+                  <span
+                    key={i}
                     className="text-xs bg-primary-dark/80 border border-accent-dark/50 text-accent-light/80 px-2.5 py-1 rounded-full font-medium"
                   >
                     {area}

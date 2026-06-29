@@ -98,11 +98,11 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-primary-dark relative">
+    <section id="services" className="py-24 bg-primary-dark relative overflow-hidden">
       {/* Decorative Blur BG */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-orange/5 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10">
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -122,7 +122,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-6 gap-4 sm:gap-6"
         >
           {servicesList.map((service, index) => (
             <motion.div
@@ -133,27 +133,27 @@ export default function Services() {
                 borderColor: 'rgba(229, 138, 53, 0.4)',
                 boxShadow: '0 15px 30px rgba(229, 138, 53, 0.15)'
               }}
-              className="bg-accent-dark/30 hover:bg-accent-dark/50 p-6 rounded-2xl border border-accent-dark/80 transition-all duration-300 flex flex-col justify-between text-left group"
+              className="bg-accent-dark/30 hover:bg-accent-dark/50 p-5 sm:p-6 rounded-2xl border border-accent-dark/80 transition-all duration-300 flex flex-col justify-between text-left group"
             >
               <div>
                 {/* Icon Container */}
-                <div className="w-12 h-12 bg-primary-dark/80 rounded-xl flex items-center justify-center border border-accent-dark group-hover:border-primary-orange/30 group-hover:bg-primary-orange/5 transition-all duration-300 mb-6 shadow-inner">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-dark/80 rounded-xl flex items-center justify-center border border-accent-dark group-hover:border-primary-orange/30 group-hover:bg-primary-orange/5 transition-all duration-300 mb-4 sm:mb-6 shadow-inner">
                   {service.icon}
                 </div>
                 
                 {/* Service Title */}
-                <h3 className="font-heading font-bold text-lg text-white group-hover:text-primary-orange transition-colors mb-3">
+                <h3 className="font-heading font-bold text-base sm:text-lg text-white group-hover:text-primary-orange transition-colors mb-2 sm:mb-3">
                   {service.title}
                 </h3>
                 
                 {/* Service Description */}
-                <p className="font-sans text-sm text-accent-light/75 leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-accent-light/75 leading-relaxed">
                   {service.description}
                 </p>
               </div>
 
-              {/* Direct Inquiry Link */}
-              <div className="mt-6 pt-4 border-t border-accent-dark/50 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Direct Inquiry Link (Always visible on mobile/touch, animate hover on desktop) */}
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-accent-dark/50 flex justify-between items-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-xs text-accent-light/50">Need this?</span>
                 <a 
                   href={`tel:9847472927`}

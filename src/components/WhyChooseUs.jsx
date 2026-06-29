@@ -132,7 +132,7 @@ export default function WhyChooseUs() {
       {/* Decorative background grid lines */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-orange/5 via-transparent to-transparent pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Text and Features list */}
@@ -143,13 +143,12 @@ export default function WhyChooseUs() {
             </h2>
             <div className="w-16 h-1 bg-primary-orange mt-4 mb-10 rounded-full" />
 
-            {/* Feature cards list */}
             <motion.div 
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
             >
               {features.map((feature, index) => (
                 <motion.div 
@@ -180,7 +179,7 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-accent-dark/40 border border-accent-dark/80 rounded-2xl p-8 shadow-2xl relative overflow-hidden"
+              className="bg-accent-dark/40 border border-accent-dark/80 rounded-2xl p-4 xxs:p-6 sm:p-8 shadow-2xl relative overflow-hidden"
             >
               {/* Card visual mimics visiting card background cues */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary-orange/5 blur-2xl rounded-full" />
@@ -189,7 +188,7 @@ export default function WhyChooseUs() {
                 Prakash Electrical By The Numbers
               </h3>
               
-              <div className="grid grid-cols-2 gap-6 text-center">
+              <div className="grid grid-cols-2 gap-3 xxs:gap-4 sm:gap-6 text-center">
                 {stats.map((stat, index) => (
                   <div 
                     key={index}

@@ -18,20 +18,20 @@ export default function CallToAction() {
         </svg>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 text-center">
-        
+      <div className="max-w-5xl 2xl:max-w-[75rem] 3xl:max-w-[90rem] mx-auto px-4 xxs:px-6 md:px-12 relative z-10 text-center">
+
         {/* Animated Headline */}
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-primary-dark"
+          className="font-heading font-extrabold text-2xl xxs:text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-primary-dark"
         >
           Need an Electrician Today?
         </motion.h2>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,22 +42,15 @@ export default function CallToAction() {
         </motion.p>
 
         {/* Buttons Group */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
         >
-          {/* Call Now button */}
-          <a
-            href={`tel:+91${phone}`}
-            className="flex items-center justify-center gap-3 bg-primary-dark text-white hover:bg-accent-dark font-heading font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-xl hover:shadow-black/20 transform hover:-translate-y-0.5 active:translate-y-0 text-base"
-          >
-            <FaPhone className="text-sm" />
-            Call Now: {phone}
-          </a>
-          
+
+
           {/* WhatsApp Button */}
           <a
             href={whatsappUrl}

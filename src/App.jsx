@@ -95,7 +95,7 @@ export default function App() {
       </Helmet>
 
       {/* Main Page Layout */}
-      <div className="bg-primary-dark text-white min-h-screen flex flex-col justify-between selection:bg-primary-orange selection:text-primary-dark">
+      <div className="bg-primary-dark text-white min-h-screen w-full overflow-x-hidden flex flex-col justify-between selection:bg-primary-orange selection:text-primary-dark">
         {/* Navigation Bar */}
         <Navbar />
 

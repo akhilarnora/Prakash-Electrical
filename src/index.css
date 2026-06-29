@@ -10,6 +10,11 @@
   
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
+
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 375px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
 }
 
 @layer base {
