@@ -126,7 +126,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Sub-footer */}
-      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+      <div className="max-w-7xl 2xl:max-w-screen-2xl 3xl:max-w-[120rem] 4xl:max-w-[150rem] mx-auto px-4 xxs:px-6 md:px-12 pt-8 flex flex-col sm:flex-row gap-4 text-center">
         <p className="font-sans text-xs text-accent-light/45">
           &copy; {new Date().getFullYear()} Prakash Electrical. All Rights Reserved.
         </p>
