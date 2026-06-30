@@ -130,9 +130,9 @@ export default function Footer() {
         <p className="font-sans text-xs text-accent-light/45">
           &copy; {new Date().getFullYear()} Prakash Electrical. All Rights Reserved.
         </p>
-        <p className="font-sans text-[10px] text-accent-light/30">
-          Designed with ❤️ in <a href="https://arnora.in">arnora.in</a>.
-        </p>
+        <a href="https://arnora.in" className="font-sans text-[10px] text-accent-light/30">
+          Designed with ❤️ by <a href="https://arnora.in">arnora.in</a>.
+        </a>
       </div>
     </footer>
   );
