@@ -41,13 +41,13 @@ export default function Footer() {
           </p>
           {/* Social CTA Links */}
           <div className="flex gap-4">
-            <a
+            {/* <a
               href={`tel:+91${phone}`}
               className="w-10 h-10 rounded-full bg-accent-dark/80 flex items-center justify-center text-accent-light hover:text-primary-orange hover:bg-accent-dark transition-all border border-accent-light/5"
               aria-label="Call Direct Line"
             >
               <FaPhone className="text-sm" />
-            </a>
+            </a> */}
             <a
               href={whatsappUrl}
               target="_blank"
